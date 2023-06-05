@@ -30,7 +30,7 @@ class Calisan(Insan):
         if sektor in sektorler:
             return sektor
         else:
-            return "diğer"
+            return "diğer"  #girilen başka sektör ise diğer olarak değerlendir
 
     def zam_hakki(self):
         try:

@@ -27,7 +27,7 @@ class BeyazYaka(Calisan):
             return None
 
     def __str__(self):
-        yeni_maas = self.zam_hakki() + self.get_maas()
+        yeni_maas = self.zam_hakki() + self.get_maas()  #yeni maaşı hesapla
         if yeni_maas == self.get_maas():
             yeni_maas = self.get_maas()
-        return f"{super().__str__()}\nTeşvik Prim: {self.__tesvik_primi}\nYeni Maaş: {yeni_maas}"
+        return f"Ad: {self.get_ad()}\nSoyad: {self.get_soyad()}\nTeşvik Prim: {self.__tesvik_primi}\nYeni Maaş: {yeni_maas}"
