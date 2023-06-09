@@ -46,7 +46,7 @@ class Calisan(Insan):
             print("hata! tecrübe değerini kontrol et")
 
     def __str__(self):
-        yeni_maas = float(self.__maas) + self.zam_hakki()
+        yeni_maas = float(self.__maas) + (self.get_maas()*self.zam_hakki()/100)
         if yeni_maas == self.__maas:
             yeni_maas = self.__maas
         return f"Ad: {self.get_ad()}\nSoyad: {self.get_soyad()}\nTecrübe: {self.__tecrube}\nYeni Maaş: {yeni_maas}"

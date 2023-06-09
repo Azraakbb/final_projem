@@ -25,7 +25,7 @@ class MaviYaka(Calisan):
             print("Hata!")  # hata varsa hata! şeklinde ekrana yazdır
 
     def __str__(self):
-        yeni_maas = self.zam_hakki()+self.get_maas()
+        yeni_maas = (self.get_maas()*self.zam_hakki()/100)+self.get_maas()
         if yeni_maas == self.get_maas():
             yeni_maas = self.get_maas()
         return f"Ad: {self.get_ad()}\nSoyad: {self.get_soyad()}\nTecrübe: {self.get_tecrube()}\nYeni Maaş: {yeni_maas}"

@@ -18,7 +18,7 @@ try:
 # Issiz sınıfı için 3 nesne oluşturma
     tecrube_dict = {"mavi yaka": 5, "beyaz yaka": 3, "yonetici": 2}
     issiz1 = Issiz("0977654421", "John", "Carol", 29, "erkek", "İngiliz", tecrube_dict)
-    tecrube_dict2 = {"mavi yaka": 8, "beyaz yaka":2,"yonetici": 3}
+    tecrube_dict2 = {"mavi yaka": 8, "beyaz yaka": 2,"yonetici": 3}
     issiz2 = Issiz("1122334455", "Mehmet", "Kaya", 30, "erkek", "Türk", tecrube_dict2)
     tecrube_dict3 = {"mavi yaka": 0, "beyaz yaka":0,"yonetici": 4}
     issiz3 = Issiz("9888593210", "Fatma", "Pak", 26, "kadın", "Türk", tecrube_dict3)
@@ -32,11 +32,11 @@ try:
 
 # Calisan sınıfı için 3 nesne oluşturma
     calisan1 = Calisan("1737547890", "Su", "Ural", 30, "kadın", "Türk", "Muhasebe", 36,998)
-    zam1 = calisan1.zam_hakki()
+    zam1 = calisan1.get_maas()*calisan1.zam_hakki()/100
     calisan2 = Calisan("1876343290", "Tuba", "Akdeniz", 25, "kadın", "Türk", "Teknoloji", 12, 3400)
-    zam2 = calisan2.zam_hakki()
+    zam2 = calisan2.get_maas()*calisan2.zam_hakki()/100
     calisan3 = Calisan("5278906274", "Melek", "Şahin", 29, "kadın", "Türk", "Diğer", 24, 2223)
-    zam3 = calisan3.zam_hakki()
+    zam3 = calisan3.get_maas()*calisan3.zam_hakki()/100
     print("Çalışan sınıfı kişileri\n")
     print(calisan1)
     print()
@@ -47,11 +47,11 @@ try:
 
 # MaviYaka sınıfı için 3 nesne oluşturma
     mavi_yaka1 = MaviYaka("1441567890", "Yusuf", "Aktaş", 34, "erkek", "Türk", "Teknoloji", 4,14052,0.5)
-    zam4 = mavi_yaka1.zam_hakki()
+    zam4 = mavi_yaka1.get_maas()*mavi_yaka1.zam_hakki()/100
     mavi_yaka2 = MaviYaka("3176543210", "Sıla", "Gökdeniz", 25, "kadın", "Türk", "Muhasebe",2,10221,0.2)
-    zam5 = mavi_yaka2.zam_hakki()
+    zam5 = mavi_yaka2.get_maas()*mavi_yaka2.zam_hakki()/100
     mavi_yaka3 = MaviYaka("5673901634", "Baran", "Erdoğdu", 37, "erkek", "Türk", "Diğer", 8,30000,0.4)
-    zam6 = mavi_yaka3.zam_hakki()
+    zam6 = mavi_yaka3.get_maas()*mavi_yaka3.zam_hakki()/100
     print("Mavi yaka sınıfı kişileri\n")
     print(mavi_yaka1)
     print()
@@ -88,7 +88,7 @@ try:
         'tecrube': [calisan1.get_tecrube()/12, calisan2.get_tecrube()/12, calisan3.get_tecrube()/12, mavi_yaka1.get_tecrube(), mavi_yaka2.get_tecrube(),mavi_yaka3.get_tecrube(), beyaz_yaka1.get_tecrube(), beyaz_yaka2.get_tecrube(), beyaz_yaka3.get_tecrube()],
         'maas': [calisan1.get_maas(), calisan2.get_maas(), calisan3.get_maas(), mavi_yaka1.get_maas(),mavi_yaka2.get_maas(), mavi_yaka3.get_maas(),beyaz_yaka1.get_maas(), beyaz_yaka2.get_maas(), beyaz_yaka3.get_maas()],
         'yipranma_payi': [0, 0, 0, mavi_yaka1.get_yipranma_payi(),mavi_yaka2.get_yipranma_payi(), mavi_yaka3.get_yipranma_payi(), 0, 0, 0],
-        'tesvik_primi': [0, 0, 0, 0,0,0, beyaz_yaka1.get_tesvik_primi(), beyaz_yaka2.get_tesvik_primi(), beyaz_yaka3.get_tesvik_primi()],
+        'tesvik_primi': [0, 0, 0, 0, 0, 0, beyaz_yaka1.get_tesvik_primi(), beyaz_yaka2.get_tesvik_primi(), beyaz_yaka3.get_tesvik_primi()],
         'yeni_maaslar': [calisan1.get_maas()+zam1, calisan2.get_maas()+zam2, calisan3.get_maas()+zam3, mavi_yaka1.get_maas()+zam4, mavi_yaka2.get_maas()+zam5,mavi_yaka3.get_maas()+zam6,beyaz_yaka1.get_maas()+zam7,beyaz_yaka2.get_maas()+zam8,beyaz_yaka3.get_maas()+zam9]
     }
 
